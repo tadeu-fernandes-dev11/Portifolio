@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="contato.css">
+    <script src="java.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <a href="index .html" class="txt_logo">Tadeu Fernandes</a>
+        <nav id="div_menu">
+            <a href="index .html" class="itens_menu">Skills</a>
+            <a href="index .html" class="itens_menu">Sobre</a>
+            <a href="projetos.html" class="itens_menu">Projetos</a>
+            <a href="contato.html" class="itens_menu">Contato</a>
+        </nav>
+
+        <!-- BOTÃO SWITCH -->
+        <label class="switch">
+            <input type="checkbox" onclick="myFunction()">
+            <span class="slider round"></span>
+        </label>
+    </header>
+
+    <section id="div_contato">
+        <div id="div_conteudo_contato">
+            <h2 id="titulo_contato">Entre Em Contato</h2>
+
+            <form id="form_contato">
+                <div class="linha_inputs">
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome:" required>
+                    <input type="email" id="email" name="email" placeholder="Digite o seu Gmail:" required>
+                </div>
+
+                <textarea id="mensagem" name="mensagem" placeholder="Deixe a sua Mensagem:" required></textarea>
+
+                <button type="submit" id="btn_enviar">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p> © Tadeu Fernandes Vieira. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

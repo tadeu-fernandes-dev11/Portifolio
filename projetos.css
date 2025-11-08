@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/*COR PRINCIPAL DO SITE*/
+:root {
+    --background: #E4C664;
+    --header: #6E5F3C;
+    --div_texto_inicial: black;
+    --tag_html: black;
+    --footer: #6E5F3C;
+    --backgrouSobreMim: #E4C664;
+    --textoSobreMim: #6E5F3C;
+}
+
+/* DARK MODE  */
+:root .DarkMode {
+    --background: #20183f;
+    --header: #0d0a1a;
+    --div_texto_inicial: white;
+    --tag_html: #e0d4ff;
+    --footer: #0d0a1a;
+    --backgrouSobreMim: #20183f;
+    --textoSobreMim: #0d0a1a;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: var(--header);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 80px;
+}
+
+.txt_logo {
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.txt_logo:hover {
+    transform: scale(1.2);
+    color: #cfc2ff;
+}
+
+
+#div_menu {
+    display: flex;
+    gap: 40px;
+}
+
+.itens_menu {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.itens_menu:hover {
+    color: #cfc2ff;
+    transform: scale(1.1);
+}
+
+/* BOTÃO SWITCH */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cac063;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: rgb(131, 60, 189);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+
+/* ======== SEÇÃO PROJETOS ======== */
+.secao-projetos {
+  background-color: var(--background);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.titulo-secao {
+  background-color: var(--textoSobreMim);
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  margin-bottom: 60px;
+}
+
+.container-projetos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-projeto {
+  background-color: var(--textoSobreMim);
+  width: 280px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card__titulo {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card__descricao {
+  font-size: 0.95rem;
+  color: #d0c8ff;
+  margin-bottom: 12px;
+}
+
+.card__tecnologia {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* ======== BOTÃO GITHUB ======== */
+.botao-github {
+  display: inline-block;
+  border: 2px solid #2494ff;
+  color: #2494ff;
+  background-color: #2D2D2D;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.botao-github:hover {
+  background-color: #2494ff;
+  color: #0c0228;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .secao-projetos {
+    padding: 60px 15px;
+  }
+
+  .container-projetos {
+    gap: 25px;
+  }
+
+  .card-projeto {
+    width: 250px;
+  }
+
+  .titulo-secao {
+    font-size: 1.6rem;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .container-projetos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-projeto {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .titulo-secao {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+
+  .card__descricao {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* RODAPÉ */
+footer {
+    background-color: var(--footer);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 0 80px;
+}
